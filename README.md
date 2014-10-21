@@ -25,9 +25,9 @@ Example on standard EC2 AWS Linux instance (m3.2xlarge to speed-up compilation).
 
 ### Run the demo
 
-Connect to the container, run the event monitor, the server, then the client:
+Run and attach to the container, run the event monitor, the server, then the client:
 
-    sudo run -ti csahut/blindstore-demo-docker:v0.1 /bin/bash
+    sudo docker run -ti csahut/blindstore-demo-docker:v0.1 /bin/bash
     /root/blindstore-demo/bsmon/meteor & 
     cd /root/blindstore
     python3 server.py &
@@ -54,4 +54,4 @@ You should get this kind of output
 	root@bac21f738b80:~/blindstore#
 
 
-Credits
+## Credits
