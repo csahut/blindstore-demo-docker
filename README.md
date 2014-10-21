@@ -15,11 +15,10 @@ You need a docker-ready host (see how to install docker here: https://docs.docke
 
 ### Build your docker image
 
-Example on standard EC2 AWS Linux instance (m3.2xlarge to speed-up compilation). It will take some time to get everything ready.
+Example on EC2 AWS Linux instance. Note it will take some time to get everything compiled.
 
     sudo yum install -y docker
     sudo service docker start
-    sudo docker pull debian:testing
     sudo docker build -t csahut/blindstore-demo-docker:v0.1 https://raw.githubusercontent.com/csahut/blindstore-demo-docker/master/csahut-blindstore-demo.docker
 
 
@@ -56,3 +55,5 @@ You should get this kind of output
 
 
 ## Credits
+
+Blindstore team https://github.com/blindstore
