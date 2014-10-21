@@ -43,6 +43,6 @@ RUN cd blindstore && pip3 install -r requirements.txt
 
 # Install blindstore-demo
 RUN git clone https://github.com/blindstore/blindstore.git
-RUN cp blindstore-demo/bs_demo.py blindstore
+RUN cp blindstore-demo/bs_demo.py blindstore/
 
 RUN cd blindstore && python3 server.py
