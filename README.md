@@ -11,8 +11,7 @@ You need a docker-ready host (see how to install docker here: https://docs.docke
 
 #### Ready-to-go docker image
 
-    docker pull csahut/blindstore-demo
- 
+	sudo docker pull csahut/blindstore-demo-docker:v0.1
 
 #### Build your docker image
 
