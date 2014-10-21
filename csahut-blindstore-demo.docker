@@ -34,8 +34,7 @@ RUN ln -s /usr/bin/nodejs /usr/bin/node
 RUN curl https://install.meteor.com/ | sh
 RUN npm install meteorite
 RUN git clone https://github.com/blindstore/blindstore-demo.git
-#RUN cd blindstore-demo/bsmon && meteor update
-RUN node_modules/.bin/mrt add collection-api
+RUN cd blindstore-demo/bsmon && ~/node_modules/.bin/mrt add collection-api
 RUN cd blindstore-demo/bsmon && meteor &
 
 # Install blindstore
