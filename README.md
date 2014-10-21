@@ -20,3 +20,4 @@ Example on a brand new EC2 AWS Linux instance (m3.2xlarge to speed-up compilatio
     sudo yum install -y docker
     sudo service docker start
     sudo docker pull debian:testing
+    sudo docker build -t csahut/blindstore-demo-docker:v0.1 https://raw.githubusercontent.com/csahut/blindstore-demo-docker/master/csahut-blindstore-demo.docker
