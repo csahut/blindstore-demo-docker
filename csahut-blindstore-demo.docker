@@ -35,7 +35,7 @@ RUN curl https://install.meteor.com/ | sh
 RUN npm install meteorite
 RUN git clone https://github.com/blindstore/blindstore-demo.git
 RUN cd blindstore-demo/bsmon && ~/node_modules/.bin/mrt add collection-api
-RUN cd blindstore-demo/bsmon && meteor &
+#RUN cd blindstore-demo/bsmon && meteor &
 
 # Install blindstore
 RUN git clone https://github.com/blindstore/blindstore.git
@@ -45,4 +45,4 @@ RUN cd blindstore && pip3 install -r requirements.txt
 RUN git clone https://github.com/blindstore/blindstore-demo.git
 RUN cp blindstore-demo/bs_demo.py blindstore/
 
-RUN cd blindstore && python3 server.py
+#RUN cd blindstore && python3 server.py
