@@ -38,5 +38,5 @@ RUN cd blindstore-demo/bsmon && ~/node_modules/.bin/mrt add collection-api
 RUN git clone https://github.com/blindstore/blindstore.git
 RUN cd blindstore && pip3 install -r requirements.txt
 
-# Install blindstore-demo
+# Prepare blindstore-demo
 RUN cp blindstore-demo/bs_demo.py blindstore/
