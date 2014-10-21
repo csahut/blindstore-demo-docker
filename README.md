@@ -7,6 +7,7 @@ You can either use a ready-to-go docker image or build yours.
 
 You need a docker-ready host (see how to install docker here: https://docs.docker.com/installation/#installation). Shortly, we run a Debian testing docker, build libScarab, pyScarab and Blindstore from their Git repos.
 
+## Get the docker image
 
 ### Ready-to-go docker image
 
@@ -22,7 +23,7 @@ Example on EC2 AWS Linux instance. Note it will take some time to get everything
     sudo docker build -t csahut/blindstore-demo-docker:v0.1 https://raw.githubusercontent.com/csahut/blindstore-demo-docker/master/csahut-blindstore-demo.docker
 
 
-### Run the demo
+## Run the demo
 
 Run and attach to the container, run the event monitor, the server, then the client:
 
