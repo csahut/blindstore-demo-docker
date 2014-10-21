@@ -16,6 +16,7 @@ You need a docker-ready host (see how to install docker here: https://docs.docke
 ### Build your docker image
 
 Example on a brand new EC2 AWS Linux instance (m3.2xlarge to speed-up compilation)
+
     sudo yum install -y docker
     sudo service docker start
     sudo docker pull debian:testing
