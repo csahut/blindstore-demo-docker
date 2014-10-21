@@ -6,6 +6,7 @@
 
 FROM debian:testing
 MAINTAINER Christophe Sahut, csahut@nogoa.org
+WORKDIR /root
 
 RUN apt-get -y update
 
@@ -14,35 +15,35 @@ RUN apt-get install -y wget sudo build-essential m4 lzip unzip python3 git pytho
 
 
 # Install libScarab
-RUN cd /root && git clone https://github.com/blindstore/libScarab.git
+RUN git clone https://github.com/blindstore/libScarab.git
 # Fix dependencies to get last version of MPIR because of a compiling bug on X86_64
-RUN sed -i 's/mpir-2.6.0.tar.bz2/mpir-2.7.0-alpha12.tar.bz2/' /root/libScarab/scripts/install-dependencies.sh
-RUN sed -i 's/mpir-2.6.0/mpir-2.7.0/' /root/libScarab/scripts/install-dependencies.sh
-RUN sed -i 's/mpir-2.6.0/mpir-2.7.0/' /root/libScarab/scripts/uninstall-dependencies.sh
+RUN sed -i 's/mpir-2.6.0.tar.bz2/mpir-2.7.0-alpha12.tar.bz2/' libScarab/scripts/install-dependencies.sh
+RUN sed -i 's/mpir-2.6.0/mpir-2.7.0/' libScarab/scripts/install-dependencies.sh
+RUN sed -i 's/mpir-2.6.0/mpir-2.7.0/' libScarab/scripts/uninstall-dependencies.sh
 # Compile libScarab
-RUN cd /root/libScarab && ./scripts/install-dependencies.sh && make && make install
+RUN cd libScarab && ./scripts/install-dependencies.sh && make && make install
 
 
 # Install pyScarab
-RUN cd /root && git clone https://github.com/blindstore/pyscarab.git &&  pip3 install git+git://github.com/blindstore/pyscarab.git@master
+RUN git clone https://github.com/blindstore/pyscarab.git && pip3 install git+git://github.com/blindstore/pyscarab.git@master
 # For testing only
 #RUN pip install nose && cd pyscarab && nosetests scarab/tests
 
 # Install Event monitor
 RUN ln -s /usr/bin/nodejs /usr/bin/node
-RUN cd /root && curl https://install.meteor.com/ | sh
+RUN curl https://install.meteor.com/ | sh
 RUN npm install meteorite
 RUN git clone https://github.com/blindstore/blindstore-demo.git
 #RUN cd blindstore-demo/bsmon && meteor update
-RUN /root/node_modules/.bin/mrt add collection-api
+RUN node_modules/.bin/mrt add collection-api
 RUN cd blindstore-demo/bsmon && meteor &
 
 # Install blindstore
-RUN cd /root && git clone https://github.com/blindstore/blindstore.git
-RUN cd /root/blindstore && pip3 install -r requirements.txt
+RUN git clone https://github.com/blindstore/blindstore.git
+RUN cd blindstore && pip3 install -r requirements.txt
 
 # Install blindstore-demo
 RUN git clone https://github.com/blindstore/blindstore.git
-RUN cp /root/blindstore-demo/bs_demo.py /root/blindstore
+RUN cp blindstore-demo/bs_demo.py blindstore
 
-RUN cd /root/blindstore && python3 server.py
+RUN cd blindstore && python3 server.py
