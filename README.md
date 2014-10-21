@@ -56,4 +56,4 @@ You should get this kind of output
 
 ## Credits
 
-Blindstore team https://github.com/blindstore
+Thanks to Blindstore team https://github.com/blindstore
