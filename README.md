@@ -9,12 +9,12 @@ You need a docker-ready host (see how to install docker here: https://docs.docke
 
 ## Get the docker image
 
-### Ready-to-go docker image
+#### Ready-to-go docker image
 
     docker pull csahut/blindstore-demo
  
 
-### Build your docker image
+#### Build your docker image
 
 Example on EC2 AWS Linux instance. Note it will take some time to get everything compiled.
 
@@ -25,7 +25,7 @@ Example on EC2 AWS Linux instance. Note it will take some time to get everything
 
 ## Run the demo
 
-Run and attach to the container, run the event monitor, the server, then the client:
+Run the container, run the event monitor, the server, then the client:
 
     sudo docker run -ti csahut/blindstore-demo-docker:v0.1 /bin/bash
     cd /root/blindstore-demo/bsmon/
