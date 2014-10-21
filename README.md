@@ -28,7 +28,8 @@ Example on standard EC2 AWS Linux instance (m3.2xlarge to speed-up compilation).
 Run and attach to the container, run the event monitor, the server, then the client:
 
     sudo docker run -ti csahut/blindstore-demo-docker:v0.1 /bin/bash
-    /root/blindstore-demo/bsmon/meteor & 
+    cd /root/blindstore-demo/bsmon/
+    meteor & 
     cd /root/blindstore
     python3 server.py &
     python3 client.py
