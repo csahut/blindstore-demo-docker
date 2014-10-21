@@ -5,7 +5,7 @@ The goal is to give the ability to anyone to quickly play with Blindstore Privat
 
 You can either use a ready-to-go docker image or build yours.
 
-You need a docker-ready host (see how to install docker here: https://docs.docker.com/installation/#installation)
+You need a docker-ready host (see how to install docker here: https://docs.docker.com/installation/#installation). Shortly, we run a Debian testing docker, build libScarab, pyScarab and Blindstore from their Git repos.
 
 
 ### Ready-to-go docker image
