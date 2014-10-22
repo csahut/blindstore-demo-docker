@@ -28,6 +28,7 @@ Run the container, run the event monitor, the server, then the client:
 
     sudo docker run -ti csahut/blindstore-demo-docker:v0.2 /bin/bash
     cd /root/blindstore-demo/bsmon/
+    export USER=root
     meteor & 
 
 
