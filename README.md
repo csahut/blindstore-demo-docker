@@ -34,8 +34,8 @@ Run the container, run the event monitor, the server, then the client:
 Open a browser and go to http://localhost:3000. Continue typing these commands in the container:
 
     cd /root/blindstore
-    python3 server.py &
-    python3 client.py
+    python3 server_script.py &
+    python3 client_script.py
 
 
 You should get this kind of output in the terminal
