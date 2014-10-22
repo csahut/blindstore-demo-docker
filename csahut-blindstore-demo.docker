@@ -1,8 +1,8 @@
 # Install Blindstore-demo
 #
-# $ sudo docker build -t csahut/blindstore-demo-docker:v0.1 https://raw.githubusercontent.com/csahut/blindstore-demo-docker/master/csahut-blindstore-demo.docker
+# $ sudo docker build -t csahut/blindstore-demo-docker:v0.2 https://raw.githubusercontent.com/csahut/blindstore-demo-docker/master/csahut-blindstore-demo.docker
 #
-# VERSION 1.1
+# VERSION 0.2
 
 FROM debian:testing
 MAINTAINER Christophe Sahut, csahut@nogoa.org
