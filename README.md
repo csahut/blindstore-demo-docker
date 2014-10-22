@@ -11,7 +11,7 @@ You need a docker-ready host (see how to install docker here: https://docs.docke
 
 #### Ready-to-go docker image
 
-	sudo docker pull csahut/blindstore-demo-docker:v0.1
+	sudo docker pull csahut/blindstore-demo-docker:v0.2
 
 #### Build your docker image
 
@@ -19,22 +19,26 @@ Example on EC2 AWS Linux instance. Note it will take some time to get everything
 
     sudo yum install -y docker
     sudo service docker start
-    sudo docker build -t csahut/blindstore-demo-docker:v0.1 https://raw.githubusercontent.com/csahut/blindstore-demo-docker/master/csahut-blindstore-demo.docker
+    sudo docker build -t csahut/blindstore-demo-docker:v0.2 https://raw.githubusercontent.com/csahut/blindstore-demo-docker/master/csahut-blindstore-demo.docker
 
 
 ## Run the demo
 
 Run the container, run the event monitor, the server, then the client:
 
-    sudo docker run -ti csahut/blindstore-demo-docker:v0.1 /bin/bash
+    sudo docker run -ti csahut/blindstore-demo-docker:v0.2 /bin/bash
     cd /root/blindstore-demo/bsmon/
     meteor & 
+
+
+Open a browser and go to http://localhost:3000. Continue typing these commands in the container:
+
     cd /root/blindstore
     python3 server.py &
     python3 client.py
 
 
-You should get this kind of output
+You should get this kind of output in the terminal
 
 
 	root@bac21f738b80:~/blindstore# python3 client.py
@@ -53,6 +57,9 @@ You should get this kind of output
 	Retrieved in 7.356469 seconds
 	root@bac21f738b80:~/blindstore#
 
+And this kind of output in the browser
+
+![alt tag](https://raw.github.com/csahut/blindstore-demo/blindstore-demo.png)
 
 ## Credits
 

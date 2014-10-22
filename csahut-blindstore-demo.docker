@@ -2,7 +2,7 @@
 #
 # $ sudo docker build -t csahut/blindstore-demo-docker:v0.1 https://raw.githubusercontent.com/csahut/blindstore-demo-docker/master/csahut-blindstore-demo.docker
 #
-# VERSION 1.0
+# VERSION 1.1
 
 FROM debian:testing
 MAINTAINER Christophe Sahut, csahut@nogoa.org
@@ -39,4 +39,7 @@ RUN git clone https://github.com/blindstore/blindstore.git
 RUN cd blindstore && pip3 install -r requirements.txt
 
 # Prepare blindstore-demo
+RUN cd blindstore && git checkout demo
 RUN cp blindstore-demo/bs_demo.py blindstore/
+
+EXPOSE 3000
