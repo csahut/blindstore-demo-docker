@@ -59,7 +59,7 @@ You should get this kind of output in the terminal
 
 And this kind of output in the browser
 
-![alt tag](https://raw.github.com/csahut/blindstore-demo/blindstore-demo.png)
+![alt tag](https://raw.githubusercontent.com/csahut/blindstore-demo-docker/devel/blindstore-demo.png)
 
 ## Credits
 
