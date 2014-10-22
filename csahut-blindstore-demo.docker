@@ -41,5 +41,3 @@ RUN cd blindstore && pip3 install -r requirements.txt
 # Prepare blindstore-demo
 RUN cd blindstore && git checkout demo
 RUN cp blindstore-demo/bs_demo.py blindstore/
-
-EXPOSE 3000
