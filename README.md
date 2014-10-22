@@ -26,7 +26,7 @@ Example on EC2 AWS Linux instance. Note it will take some time to get everything
 
 Run the container, run the event monitor, the server, then the client:
 
-    sudo docker run -ti csahut/blindstore-demo-docker:v0.2 /bin/bash
+    sudo docker run -ti -p 3000:3000 csahut/blindstore-demo-docker:v0.2 /bin/bash
     cd /root/blindstore-demo/bsmon/
     export USER=root
     meteor & 
