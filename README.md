@@ -1,5 +1,6 @@
 blindstore-demo-docker
 ======================
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/csahut/blindstore-demo-docker?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 The goal is to give the ability to anyone to quickly play with Blindstore Private Information Retrieval data store. 
 
